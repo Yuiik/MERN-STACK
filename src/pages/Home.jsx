@@ -50,7 +50,7 @@ export default function Home() {
       </p>
       <div className="social-icons">
         {icons.map(({ href, icon }, index) => (
-          <SocialIcon href={href} icon={icon} />
+          <SocialIcon href={href} icon={icon} key={index} />
         ))}
       </div>
     </Section>

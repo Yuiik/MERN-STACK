@@ -27,7 +27,7 @@ export default function Skills() {
   const programmingLanguages = (
     <ul className="list-inline dev-icons">
       {languageIcons.map((icon, index) => (
-        <li className="list-inline-item">
+        <li className="list-inline-item" key={index}>
           <i className={`fab ${icon}`}></i>
         </li>
       ))}
@@ -37,7 +37,7 @@ export default function Skills() {
   const workOverFlow = (
     <ul className="fa-ul mb-0">
       {workData.map(({ icon, text }, index) => (
-        <li>
+        <li key={index}>
           <span className="fa-li">
             <i className={`fas ${icon}`}></i>
           </span>

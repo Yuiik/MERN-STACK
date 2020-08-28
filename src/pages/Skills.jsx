@@ -1,80 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import Section from "../components/Section";
 
 export default function Skills() {
+  const [languageIcons, setLanguageIcons] = useState([
+    "fa-html5",
+    "fa-css3-alt",
+    "fa-js-square",
+    "fa-angular",
+    "fa-react",
+    "fa-node-js",
+    "fa-sass",
+    "fa-less",
+    "fa-wordpress",
+    "fa-gulp",
+    "fa-grunt",
+    "fa-npm",
+  ]);
+
+  const [workData, setWorkData] = useState([
+    { icon: "fa-check", text: "Mobile-First, Responsive Design" },
+    { icon: "fa-check", text: "Cross Browser Testing & Debugging" },
+    { icon: "fa-check", text: "Cross Functional Teams" },
+    { icon: "fa-check", text: "Agile Development & Scrum" },
+  ]);
+
+  const programmingLanguages = (
+    <ul className="list-inline dev-icons">
+      {languageIcons.map((icon, index) => (
+        <li className="list-inline-item">
+          <i className={`fab ${icon}`}></i>
+        </li>
+      ))}
+    </ul>
+  );
+
+  const workOverFlow = (
+    <ul className="fa-ul mb-0">
+      {workData.map(({ icon, text }, index) => (
+        <li>
+          <span className="fa-li">
+            <i className={`fas ${icon}`}></i>
+          </span>
+          {text}
+        </li>
+      ))}
+    </ul>
+  );
+
   return (
-    <React.Fragment>
-      <section className="resume-section" id="skills">
-        <div className="resume-section-content">
-          <h2 className="mb-5">Skills</h2>
-          <div className="subheading mb-3">Programming Languages & Tools</div>
-          <ul className="list-inline dev-icons">
-            <li className="list-inline-item">
-              <i className="fab fa-html5"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-css3-alt"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-js-square"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-angular"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-react"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-node-js"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-sass"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-less"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-wordpress"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-gulp"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-grunt"></i>
-            </li>
-            <li className="list-inline-item">
-              <i className="fab fa-npm"></i>
-            </li>
-          </ul>
-          <div className="subheading mb-3">Workflow</div>
-          <ul className="fa-ul mb-0">
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              Mobile-First, Responsive Design
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              Cross Browser Testing & Debugging
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              Cross Functional Teams
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              Agile Development & Scrum
-            </li>
-          </ul>
-        </div>
-      </section>
-      <hr className="m-0" />
-    </React.Fragment>
+    <Section id="skills" title="Skills">
+      <div className="subheading mb-3">Programming Languages & Tools</div>
+      {programmingLanguages}
+      <div className="subheading mb-3">Workflow</div>
+      {workOverFlow}
+    </Section>
   );
 }

@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import Section from "../components/Section";
 
 const SocialIcon = ({ href, icon }) => {
   return (
-    <a className="social-icon" href={href} target="_blank">
+    <a
+      className="social-icon"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <i className={`fab ${icon}`}></i>
     </a>
   );
 };
 
 export default function Home() {
-  const [icons, setIcons] = useState([
+  const icons = [
     {
       href: "https://www.linkedin.com/in/aashish-maharjan-788b661b0/",
       icon: "fa-linkedin-in",
@@ -27,7 +32,7 @@ export default function Home() {
       href: "https://www.facebook.com/aashishmaharjan.2001",
       icon: "fa-facebook-f",
     },
-  ]);
+  ];
 
   return (
     <Section id="about">

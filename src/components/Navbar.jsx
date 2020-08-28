@@ -22,7 +22,7 @@ export default function Navbar() {
       className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
     >
-      <a className="navbar-brand js-scroll-trigger" href="#page-top">
+      <a className="navbar-brand js-scroll-trigger" href="/">
         <span className="d-block d-lg-none">{username}</span>
         <span className="d-none d-lg-block">
           <img
@@ -51,28 +51,8 @@ export default function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#experience">
-              Experience
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#education">
-              Education
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#skills">
-              Skills
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#interests">
-              Interests
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#awards">
-              Awards
+            <a className="nav-link js-scroll-trigger" href="#portfolio">
+              Portfolio
             </a>
           </li>
         </ul>

@@ -1,58 +1,101 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import Section from "../components/Section";
+import Skill from "../components/Skill";
 
-export default function Skills() {
-  const [languageIcons, setLanguageIcons] = useState([
-    "fa-html5",
-    "fa-css3-alt",
-    "fa-js-square",
-    "fa-angular",
-    "fa-react",
-    "fa-node-js",
-    "fa-sass",
-    "fa-less",
-    "fa-wordpress",
-    "fa-gulp",
-    "fa-grunt",
-    "fa-npm",
-  ]);
+class Skills extends Component {
+  state = {
+    workData: [
+      { icon: "fa-check", text: "Mobile-First, Responsive Design" },
+      { icon: "fa-check", text: "Cross Browser Testing & Debugging" },
+      { icon: "fa-check", text: "Cross Functional Teams" },
+      { icon: "fa-check", text: "Agile Development & Scrum" },
+    ],
 
-  const [workData, setWorkData] = useState([
-    { icon: "fa-check", text: "Mobile-First, Responsive Design" },
-    { icon: "fa-check", text: "Cross Browser Testing & Debugging" },
-    { icon: "fa-check", text: "Cross Functional Teams" },
-    { icon: "fa-check", text: "Agile Development & Scrum" },
-  ]);
+    skills: [
+      {
+        title: "HTML",
+        progress: "90%",
+      },
+      {
+        title: "CSS",
+        progress: "80%",
+      },
+      {
+        title: "Javascript",
+        progress: "65%",
+      },
+      {
+        title: "Python",
+        progress: "35%",
+      },
+      {
+        title: "C Programming",
+        progress: "40%",
+      },
+      {
+        title: "Photoshop / Figma",
+        progress: "60%",
+      },
+    ],
+    frameworks: [
+      {
+        title: "Bootstrap",
+        progress: "60%",
+      },
+      {
+        title: "Material-UI",
+        progress: "30%",
+      },
+      {
+        title: "React.js",
+        progress: "55%",
+      },
+      {
+        title: "Django",
+        progress: "30%",
+      },
+    ],
+  };
 
-  const programmingLanguages = (
-    <ul className="list-inline dev-icons">
-      {languageIcons.map((icon, index) => (
-        <li className="list-inline-item" key={index}>
-          <i className={`fab ${icon}`}></i>
-        </li>
-      ))}
-    </ul>
-  );
+  render() {
+    const { workData, skills, frameworks } = this.state;
 
-  const workOverFlow = (
-    <ul className="fa-ul mb-0">
-      {workData.map(({ icon, text }, index) => (
-        <li key={index}>
-          <span className="fa-li">
-            <i className={`fas ${icon}`}></i>
-          </span>
-          {text}
-        </li>
-      ))}
-    </ul>
-  );
+    const skillsJsx = skills.map((skill, index) => (
+      <div className="col-md-8 py-1" key={index}>
+        <Skill skill={skill} />
+      </div>
+    ));
 
-  return (
-    <Section id="skills" title="Skills">
-      <div className="subheading mb-3">Programming Languages & Tools</div>
-      {programmingLanguages}
-      <div className="subheading mb-3">Workflow</div>
-      {workOverFlow}
-    </Section>
-  );
+    const frameworksJsx = frameworks.map((skill, index) => (
+      <div className="col-md-8 py-1" key={index}>
+        <Skill skill={skill} secondary />
+      </div>
+    ));
+
+    const workOverFlow = (
+      <ul className="fa-ul mb-0">
+        {workData.map(({ icon, text }, index) => (
+          <li key={index}>
+            <span className="fa-li">
+              <i className={`fas ${icon}`}></i>
+            </span>
+            {text}
+          </li>
+        ))}
+      </ul>
+    );
+
+    return (
+      <Section id="skills" title="Skills">
+        <div className="subheading mb-3">Coding Languages</div>
+        <div className="row mb-4">{skillsJsx}</div>
+        <div className="subheading mb-3">Frameworks / Libraries</div>
+        <div className="row mb-4">{frameworksJsx}</div>
+        <div className="subheading mb-3">Workflow</div>
+        {workOverFlow}
+      </Section>
+    );
+  }
 }
+
+export default Skills;

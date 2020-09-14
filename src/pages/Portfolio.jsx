@@ -5,6 +5,7 @@ import CoronaTrackerThumb from "../assets/thumb.png";
 import HamroJourneyThumb from "../assets/portfolio/hamrojourney.png";
 import HimalanResortThumb from "../assets/portfolio/himalayanresort.png";
 import RMSThumb from "../assets/portfolio/rms.png";
+import QuizbeeThumb from "../assets/portfolio/quizbee.png";
 
 export default function Portfolio() {
   const cards = [
@@ -17,6 +18,14 @@ export default function Portfolio() {
       source: "https://github.com/aacismaharjan/coronatracker",
     },
     {
+      img: HimalanResortThumb,
+      title: "Himalayan Resort - ReactJS",
+      desc:
+        "When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows",
+      demo: "https://himalayanresort.netlify.app/",
+      source: "https://github.com/aacismaharjan/himalayanresort",
+    },
+    {
       img: HamroJourneyThumb,
       title: "Hamro Journey - HTML, CSS & JS",
       desc:
@@ -24,13 +33,14 @@ export default function Portfolio() {
       demo: "https://aacismaharjan.github.io/hamrojourney/",
       source: "https://github.com/aacismaharjan/hamrojourney",
     },
+
     {
-      img: HimalanResortThumb,
-      title: "Himalayan Resort - ReactJS",
+      img: QuizbeeThumb,
+      title: "Quizbee - Reactjs and External Api",
       desc:
-        "When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows",
-      demo: "https://himalayanresort.netlify.app/",
-      source: "https://github.com/aacismaharjan/himalayanresort",
+        "Simple Quizbee web app build with ReactJS which eats the api and interacts with users!",
+      demo: "https://aacismaharjan.github.io/quizbee/",
+      source: "https://github.com/aacismaharjan/quizbee",
     },
     {
       img: RMSThumb,

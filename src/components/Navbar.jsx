@@ -51,6 +51,11 @@ export default function Navbar() {
             </a>
           </li>
           <li className="nav-item">
+            <a className="nav-link js-scroll-trigger" href="#skills">
+              Skills
+            </a>
+          </li>
+          <li className="nav-item">
             <a className="nav-link js-scroll-trigger" href="#portfolio">
               Portfolio
             </a>

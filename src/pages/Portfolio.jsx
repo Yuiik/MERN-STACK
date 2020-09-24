@@ -8,6 +8,7 @@ import RMSThumb from '../assets/portfolio/rms.png'
 import QuizbeeThumb from '../assets/portfolio/quizbee.png'
 import YoutubeCloneThumb from '../assets/portfolio/youtube-clone.png'
 import SimplePortfolioThumb from '../assets/portfolio/simple_portfolio.png'
+import CoolorsThumb from '../assets/portfolio/coolors.png'
 
 export default function Portfolio() {
   const cards = [
@@ -51,7 +52,14 @@ export default function Portfolio() {
       demo: 'https://aacismaharjan.github.io/hamrojourney/',
       source: 'https://github.com/aacismaharjan/hamrojourney',
     },
-
+    {
+      img: CoolorsThumb,
+      title: 'Coolors Everywhere! - ReactJS',
+      desc:
+        'Coolors website for fullfiling every developers color need! Find colors, complementary colors, html colors & much more.',
+      demo: 'https://aacismaharjan.github.io/coolors/',
+      source: 'https://github.com/aacismaharjan/coolors',
+    },
     {
       img: QuizbeeThumb,
       title: 'Quizbee - Reactjs and External Api',

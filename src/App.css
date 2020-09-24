@@ -4,7 +4,7 @@
       rgba(203, 100, 61, 0.92),
       rgba(203, 100, 61, 0.92)
     ),
-    url("./assets//cover.jpg");
+    url('./assets//cover.jpg');
   background-size: cover;
   background-position: center center;
 }
@@ -42,4 +42,9 @@
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, transparent, rgba(203, 100, 61, 0.92));
   border-radius: 6px;
+}
+
+.btn.btn-custom {
+  border: none;
+  background: linear-gradient(90deg, #bd5d38, #ff6e36);
 }

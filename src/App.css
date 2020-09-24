@@ -44,7 +44,8 @@
   border-radius: 6px;
 }
 
-.btn.btn-custom {
+.btn-custom,
+.btn-primary {
   border: none;
-  background: linear-gradient(90deg, #bd5d38, #ff6e36);
+  background: linear-gradient(90deg, #bd5d38, #ff6e36) !important;
 }

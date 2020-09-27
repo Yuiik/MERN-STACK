@@ -15,6 +15,12 @@
   background-size: cover;
   background-repeat: none;
   background-position: top center;
+  cursor: pointer;
+  transition: all 3s ease;
+}
+
+.card:hover .card-thumbnail {
+  background-position: bottom center;
 }
 
 .cards {

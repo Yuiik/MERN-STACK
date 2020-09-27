@@ -9,9 +9,18 @@ import QuizbeeThumb from '../assets/portfolio/quizbee.png'
 import YoutubeCloneThumb from '../assets/portfolio/youtube-clone.png'
 import SimplePortfolioThumb from '../assets/portfolio/simple_portfolio.png'
 import CoolorsThumb from '../assets/portfolio/coolors.png'
+import LandingPageTemplateThumb from '../assets/portfolio/landing_page_template.png'
 
 export default function Portfolio() {
   const cards = [
+    {
+      img: LandingPageTemplateThumb,
+      title: 'Product Landing Page - HTML Template',
+      desc:
+        'Landing page for client with Modern Looks, Design and Framework!',
+      demo: 'https://aacismaharjan.github.io/product_landing_page/',
+      source: 'https://github.com/aacismaharjan/product_landing_page',
+    },
     {
       img: CoronaTrackerThumb,
       title: 'Corona Tracker - ReactJS',

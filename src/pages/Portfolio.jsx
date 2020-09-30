@@ -10,24 +10,17 @@ import YoutubeCloneThumb from '../assets/portfolio/youtube-clone.png'
 import SimplePortfolioThumb from '../assets/portfolio/simple_portfolio.png'
 import CoolorsThumb from '../assets/portfolio/coolors.png'
 import LandingPageTemplateThumb from '../assets/portfolio/landing_page_template.png'
+import GetWatchThumb from '../assets/portfolio/getwatch.png'
 
 export default function Portfolio() {
   const cards = [
     {
-      img: LandingPageTemplateThumb,
-      title: 'Product Landing Page - HTML Template',
+      img: GetWatchThumb,
+      title: 'Apple Watch - ReactJs Template',
       desc:
-        'Landing page for client with Modern Looks, Design and Framework!',
-      demo: 'https://aacismaharjan.github.io/product_landing_page/',
-      source: 'https://github.com/aacismaharjan/product_landing_page',
-    },
-    {
-      img: CoronaTrackerThumb,
-      title: 'Corona Tracker - ReactJS',
-      desc:
-        'It shows the overall corona cases throughout the world, Also presents data in readable diagrams/charts.',
-      demo: 'https://aacismaharjan.github.io/coronatracker/',
-      source: 'https://github.com/aacismaharjan/coronatracker',
+        'Created with highly reusable components, can be updated from remote file.',
+      demo: 'https://getwatch.netlify.app/',
+      source: 'https://github.com/aacismaharjan/react_landing_page',
     },
     {
       img: HimalanResortThumb,
@@ -38,12 +31,27 @@ export default function Portfolio() {
       source: 'https://github.com/aacismaharjan/himalayanresort',
     },
     {
+      img: CoronaTrackerThumb,
+      title: 'Corona Tracker - ReactJS',
+      desc:
+        'It shows the overall corona cases throughout the world, Also presents data in readable diagrams/charts.',
+      demo: 'https://aacismaharjan.github.io/coronatracker/',
+      source: 'https://github.com/aacismaharjan/coronatracker',
+    },
+    {
       img: YoutubeCloneThumb,
       title: 'Youtube Clone - ReactJS',
       desc:
         'Simple Youtube Clone with React.js. It utilizes the Youtube api to fetch the data and display it',
       demo: 'https://aacismaharjan.github.io/youtube-clone/',
       source: 'https://github.com/aacismaharjan/youtube-clone',
+    },
+    {
+      img: LandingPageTemplateThumb,
+      title: 'Product Landing Page - HTML Template',
+      desc: 'Landing page for client with Modern Looks, Design and Framework!',
+      demo: 'https://aacismaharjan.github.io/product_landing_page/',
+      source: 'https://github.com/aacismaharjan/product_landing_page',
     },
     {
       img: SimplePortfolioThumb,
@@ -61,14 +69,7 @@ export default function Portfolio() {
       demo: 'https://aacismaharjan.github.io/hamrojourney/',
       source: 'https://github.com/aacismaharjan/hamrojourney',
     },
-    {
-      img: CoolorsThumb,
-      title: 'Coolors Everywhere! - ReactJS',
-      desc:
-        'Coolors website for fullfiling every developers color need! Find colors, complementary colors, html colors & much more.',
-      demo: 'https://aacismaharjan.github.io/coolors/',
-      source: 'https://github.com/aacismaharjan/coolors',
-    },
+
     {
       img: QuizbeeThumb,
       title: 'Quizbee - Reactjs and External Api',
@@ -77,6 +78,15 @@ export default function Portfolio() {
       demo: 'https://aacismaharjan.github.io/quizbee/',
       source: 'https://github.com/aacismaharjan/quizbee',
     },
+    {
+      img: CoolorsThumb,
+      title: 'Coolors Everywhere! - ReactJS',
+      desc:
+        'Coolors website for fullfiling every developers color need! Find colors, complementary colors, html colors & much more.',
+      demo: 'https://aacismaharjan.github.io/coolors/',
+      source: 'https://github.com/aacismaharjan/coolors',
+    },
+
     {
       img: RMSThumb,
       title: 'Result Management System - C Programming',

@@ -41,7 +41,7 @@ export default function Home() {
         Aashish
         <span className='text-primary'>Maharjan</span>
       </h1>
-      <div className='subheading mb-5'>
+      <div className='subheading mb-3'>
         Purano Kalimati, Kathmandu, Nepal ·
         <a href='mailto:aashishmaharjan2001@gmail.com'>
           aashishmaharjan2001@gmail.com

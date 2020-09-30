@@ -55,3 +55,22 @@
   border: none;
   background: linear-gradient(90deg, #bd5d38, #ff6e36) !important;
 }
+
+/* About */
+@media screen and (max-width: 768px) {
+  #about > div > h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  #about > div > h1 .text-primary {
+    font-size: 5rem;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .social-icons .social-icon {
+    margin: 0px 5px;
+  }
+}

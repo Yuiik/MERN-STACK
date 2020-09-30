@@ -56,6 +56,29 @@
   background: linear-gradient(90deg, #bd5d38, #ff6e36) !important;
 }
 
+/* Codepen */
+.codepen-cards {
+  position: relative;
+}
+
+.codepen-cards .codepen-card {
+  width: 100%;
+  padding-top: calc(9 / 16 * 100%);
+  position: relative;
+  margin: 15px 0;
+}
+
+.codepen-cards .codepen-card iframe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
 /* About */
 @media screen and (max-width: 768px) {
   #about > div > h1 {

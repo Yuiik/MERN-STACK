@@ -22,7 +22,7 @@ export default function Codepen() {
     <Section id='codepen' title='Codepen'>
       <div className='codepen-cards'>
         <CodepenCard id='MWydyoe' />
-        {/* <CodepenCard id='ZEQKoMo' /> */}
+        <CodepenCard id='MWyMjqR' />
       </div>
     </Section>
   )

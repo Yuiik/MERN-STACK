@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Card({ card: { img, title, desc, demo, source } }) {
   return (
-    <div className='card'>
+    <div className='card' data-aos='flip-left'>
       <div
         className='card-thumbnail'
         style={{ backgroundImage: `url(${img})` }}

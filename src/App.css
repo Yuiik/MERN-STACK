@@ -90,6 +90,11 @@
     font-size: 5rem;
     display: block;
   }
+
+  /* Show 16:9 in mobile devices */
+  .codepen-cards .codepen-card {
+    padding-top: calc(16 / 9 * 100%);
+  }
 }
 
 @media screen and (max-width: 400px) {

@@ -4,14 +4,14 @@ import Section from '../components/Section'
 const CodepenCard = ({ id }) => {
   const codepenURL = `https://codepen.io/aashish2058/embed/${id}?theme-id=light&default-tab=result`
   return (
-    <div className='codepen-card'>
+    <div className='codepen-card' data-aos='fade-up'>
       <iframe
         scrolling='no'
         src={codepenURL}
-        frameborder='no'
+        frameBorder='no'
         loading='lazy'
         allowtransparency='true'
-        allowfullscreen='true'
+        allowFullScreen={true}
       ></iframe>
     </div>
   )

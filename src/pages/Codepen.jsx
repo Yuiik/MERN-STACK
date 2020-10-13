@@ -24,8 +24,8 @@ export default function Codepen() {
   return (
     <Section id='codepen' title='Codepen'>
       <div className='codepen-cards'>
-        {codepenItems && codepenItems.map((item, index) => 
-          <CodepenCard id={item}/>
+        {codepenItems && codepenItems.map((item) => 
+          <CodepenCard id={item} key={item}/>
         )}
       </div>
     </Section>

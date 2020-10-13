@@ -19,12 +19,10 @@ function App() {
       <Route exact path='/'>
         <div id='wrapper'>
           <Navbar />
-          <div className='container-fluid p-0'>
-            <Home />
-            <Skills />
-            <Portfolio />
-            <Codepen />
-          </div>
+          <Home />
+          <Skills />
+          <Portfolio />
+          <Codepen />
         </div>
       </Route>
     </Switch>

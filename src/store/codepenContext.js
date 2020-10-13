@@ -1,1 +1,1 @@
-export default ['MWydyoe', 'MWyMjqR']
+export default ['MWyMjqR', 'MWydyoe']

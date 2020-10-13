@@ -1,10 +1,9 @@
 import React from 'react'
-import loadingGif from '../assets/loading.svg'
+// import loadingGif from '../assets/loading.svg'
 
 export default function Card({ card: { img, title, desc, demo, source } }) {
   return (
     <div className='card' data-aos='flip-left'>
-      
       <div
         className='card-thumbnail'
         style={{ backgroundImage: `url(${img})` }}

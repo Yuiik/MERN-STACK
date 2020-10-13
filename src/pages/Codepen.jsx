@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { useContext } from 'react'
 import Section from '../components/Section'
 import { DataContext } from '../store/context'
@@ -14,6 +15,7 @@ const CodepenCard = ({ id }) => {
         loading='lazy'
         allowtransparency='true'
         allowFullScreen={true}
+        title={id}
       ></iframe>
     </div>
   )
@@ -21,12 +23,23 @@ const CodepenCard = ({ id }) => {
 
 export default function Codepen() {
   const {codepenItems} = useContext(DataContext)
+  const [count, setCount] = useState(1)
+  const [items, setItems] = useState([])
+
+  useEffect(()=> {
+    setItems(codepenItems.slice(0, count))
+  }, [count, codepenItems])
+
   return (
     <Section id='codepen' title='Codepen'>
       <div className='codepen-cards'>
-        {codepenItems && codepenItems.map((item) => 
+        {items && items.map((item) => 
           <CodepenCard id={item} key={item}/>
         )}
+
+        <div className='d-flex justify-content-center'>
+      {count < codepenItems.length && <div className="btn btn-primary mt-5 btn-lg" onClick={()=> setCount(count + 1)}>See more</div> }
+      </div>
       </div>
     </Section>
   )

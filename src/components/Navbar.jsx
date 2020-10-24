@@ -2,6 +2,28 @@ import React from 'react'
 import Avatar from '../assets/avatar.jpg'
 
 export default function Navbar() {
+  const navItems = [
+    {
+      name: 'About',
+      href: '#about',
+    },
+    {
+      name: 'Skills',
+      href: '#skills',
+    },
+    {
+      name: 'Portfolio',
+      href: '#portfolio',
+    },
+    {
+      name: 'Codepen',
+      href: '#codepen',
+    },
+    {
+      name: 'Contact',
+      href: '#contact',
+    },
+  ]
 
   return (
     <nav
@@ -31,26 +53,14 @@ export default function Navbar() {
       </button>
       <div className='collapse navbar-collapse' id='navbarSupportedContent'>
         <ul className='navbar-nav'>
-          <li className='nav-item'>
-            <a className='nav-link js-scroll-trigger' href='#about'>
-              About
-            </a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link js-scroll-trigger' href='#skills'>
-              Skills
-            </a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link js-scroll-trigger' href='#portfolio'>
-              Portfolio
-            </a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link js-scroll-trigger' href='#codepen'>
-              Codepen
-            </a>
-          </li>
+          {navItems.length &&
+            navItems.map((navItem, index) => (
+              <li className='nav-item'>
+                <a className='nav-link js-scroll-trigger' href={navItem.href}>
+                  {navItem.name}
+                </a>
+              </li>
+            ))}
         </ul>
       </div>
     </nav>

@@ -8,6 +8,7 @@ import { Route, Switch } from 'react-router-dom'
 import Codepen from './pages/Codepen'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Contact from './pages/Contact'
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
           <Skills />
           <Portfolio />
           <Codepen />
+          <Contact />
         </div>
       </Route>
     </Switch>

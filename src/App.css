@@ -79,6 +79,39 @@
   z-index: 1;
 }
 
+/* Contact */
+#contact {
+  padding-bottom: 0 !important;
+}
+
+#contact .contact-map iframe {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+
+#contact .contact-direct {
+  margin-bottom: 15px;
+}
+
+#contact .contact-direct .item {
+  display: flex;
+  align-items: center;
+}
+
+#contact .contact-direct .item span {
+  color: #ff6e36;
+  font-size: 24px;
+  padding: 20px;
+}
+
+#contact .contact-direct .item p {
+  border-left: 1px solid lightgrey;
+  padding-left: 20px;
+  margin: 0;
+}
+
 /* About */
 @media screen and (max-width: 768px) {
   #about > div > h1 {

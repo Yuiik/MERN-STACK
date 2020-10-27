@@ -1,6 +1,7 @@
 import React from 'react'
 import Section from '../components/Section'
 import ResumePDF from '../assets/resume.pdf'
+import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 
 const SocialIcon = ({ href, icon }) => {
   return (
@@ -10,7 +11,7 @@ const SocialIcon = ({ href, icon }) => {
       target='_blank'
       rel='noopener noreferrer'
     >
-      <i className={`fab ${icon}`}></i>
+      {icon}
     </a>
   )
 }
@@ -19,19 +20,19 @@ export default function Home() {
   const icons = [
     {
       href: 'https://www.linkedin.com/in/aashish-maharjan-788b661b0/',
-      icon: 'fa-linkedin-in',
+      icon: <FaLinkedinIn />,
     },
     {
       href: 'https://github.com/aacismaharjan',
-      icon: 'fa-github',
+      icon: <FaGithub />,
     },
     {
       href: 'https://twitter.com/aacismhrzn',
-      icon: 'fa-twitter',
+      icon: <FaTwitter />,
     },
     {
       href: 'https://www.facebook.com/aashishmaharjan.2001',
-      icon: 'fa-facebook-f',
+      icon: <FaFacebookF />,
     },
   ]
 

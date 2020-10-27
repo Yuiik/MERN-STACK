@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
+import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import Section from '../components/Section'
 
 const Contact = () => {
@@ -87,7 +88,7 @@ const Contact = () => {
               <div className='col-sm-6'>
                 <div className='item'>
                   <span>
-                    <i className='fas fa-envelope'></i>
+                    <FaEnvelope />
                   </span>
                   <p>Purano Kalimati, Kathmandu, Nepal</p>
                 </div>
@@ -96,7 +97,7 @@ const Contact = () => {
               <div className='col-sm-6'>
                 <div className='item'>
                   <span>
-                    <i className='fas fa-phone-alt'></i>
+                    <FaPhoneAlt />
                   </span>
                   <p>+977 9810154589</p>
                 </div>

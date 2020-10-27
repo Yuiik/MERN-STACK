@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
-import './index.css'
+import './css/App.scss'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Skills from './pages/Skills'

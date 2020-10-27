@@ -1,13 +1,36 @@
+import axios from 'axios'
 import React from 'react'
+import { useState } from 'react'
 import Section from '../components/Section'
 
 const Contact = () => {
+  const [formData, setFormData] = useState(new FormData())
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    if (!(formData.name && formData.email && formData.message)) {
+      alert('Something went wrong!')
+      return
+    }
+
+    alert(`Thanks ${formData.name}, I will shortly connect with you!`)
+    axios.post('https://formspree.io/f/xjvpwleg', formData, {
+      Accept: 'application/json',
+    })
+    setFormData({})
+  }
+
   return (
     <Section id='contact' title='Contact'>
       <div className='row'>
         <div className='col-md-5 order-last order-lg-first'>
           <div className='subheading mb-3'>I'd love to hear from you</div>
-          <form action='https://formspree.io/f/xjvpwleg' method='POST'>
+          <form>
             <div className='form-group'>
               <label htmlFor='username'>Full Name</label>
               <input
@@ -17,6 +40,8 @@ const Contact = () => {
                 name='name'
                 aria-describedby='emailHelp'
                 placeholder='Enter your name'
+                value={formData.name || ''}
+                onChange={handleChange}
               />
             </div>
             <div className='form-group'>
@@ -28,6 +53,8 @@ const Contact = () => {
                 id='email'
                 aria-describedby='emailHelp'
                 placeholder='Enter email'
+                value={formData.email || ''}
+                onChange={handleChange}
               />
             </div>
             <div className='form-group'>
@@ -38,10 +65,16 @@ const Contact = () => {
                 name='message'
                 rows='3'
                 placeholder='Enter message'
-              ></textarea>
+                value={formData.message || ''}
+                onChange={handleChange}
+              />
             </div>
 
-            <button type='submit' className='btn btn-primary'>
+            <button
+              type='submit'
+              className='btn btn-primary'
+              onClick={handleSubmit}
+            >
               Submit
             </button>
           </form>

@@ -1,7 +1,13 @@
 /* Globals */
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700');
+
 :root {
   --primary: #bd5d38;
   --gradient: linear-gradient(90deg, #bd5d38, #ff6e36);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -17,9 +23,7 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 0.5rem;
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'Saira Extra Condensed', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: #343a40;
@@ -57,6 +61,7 @@ h6,
 }
 
 body {
+  position: relative;
   padding-top: 3.375rem;
   color: #6c757d;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -349,5 +354,11 @@ section.resume-section .resume-section-content {
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about > div > h1 {
+    font-size: 3rem;
   }
 }

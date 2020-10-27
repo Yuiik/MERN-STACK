@@ -4,15 +4,16 @@ import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter } from 'react-router-dom'
-import { DataProvider } from './store/context'
+import { Provider } from 'react-redux'
+import store from './redux/store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <DataProvider>
+    <Provider store={store}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </DataProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { useContext } from 'react'
+import { connect } from 'react-redux'
 import Section from '../components/Section'
-import { DataContext } from '../store/context'
 
 const CodepenCard = ({ id }) => {
   const codepenURL = `https://codepen.io/aashish2058/embed/${id}?theme-id=light&default-tab=result`
@@ -21,26 +20,37 @@ const CodepenCard = ({ id }) => {
   )
 }
 
-export default function Codepen() {
-  const {codepenItems} = useContext(DataContext)
+const Codepen = ({ codepens }) => {
   const [count, setCount] = useState(1)
   const [items, setItems] = useState([])
 
-  useEffect(()=> {
-    setItems(codepenItems.slice(0, count))
-  }, [count, codepenItems])
+  useEffect(() => {
+    setItems(codepens.slice(0, count))
+  }, [count, codepens])
 
   return (
     <Section id='codepen' title='Codepen'>
       <div className='codepen-cards'>
-        {items && items.map((item) => 
-          <CodepenCard id={item} key={item}/>
-        )}
+        {items && items.map((item) => <CodepenCard id={item} key={item} />)}
 
         <div className='d-flex justify-content-center'>
-      {count < codepenItems.length && <div className="btn btn-primary mt-5 btn-lg" onClick={()=> setCount(count + 1)}>See more</div> }
-      </div>
+          {count < codepens.length && (
+            <div
+              className='btn btn-primary mt-5 btn-lg'
+              onClick={() => setCount(count + 1)}
+            >
+              See more
+            </div>
+          )}
+        </div>
       </div>
     </Section>
   )
 }
+
+const mapStateToProps = (store) => {
+  const { codepens } = store.codepen
+  return { codepens }
+}
+
+export default connect(mapStateToProps)(Codepen)

@@ -55,7 +55,7 @@ export default function Navbar() {
         <ul className='navbar-nav'>
           {navItems.length &&
             navItems.map((navItem, index) => (
-              <li className='nav-item'>
+              <li className='nav-item' key={index}>
                 <a className='nav-link js-scroll-trigger' href={navItem.href}>
                   {navItem.name}
                 </a>

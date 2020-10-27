@@ -5,12 +5,7 @@ const initialState = {
 }
 
 const portfolio = (state = initialState, action) => {
-  switch (action.type) {
-    case 1:
-      return state
-    default:
-      return state
-  }
+  return state
 }
 
 export default portfolio

@@ -8,32 +8,32 @@ const Contact = () => {
         <div className='col-md-5 order-last order-lg-first'>
           <div className='subheading mb-3'>I'd love to hear from you</div>
           <form action='https://formspree.io/f/xjvpwleg' method='POST'>
-            <div class='form-group'>
-              <label for='username'>Full Name</label>
+            <div className='form-group'>
+              <label htmlFor='username'>Full Name</label>
               <input
                 type='text'
-                class='form-control'
+                className='form-control'
                 id='username'
                 name='name'
                 aria-describedby='emailHelp'
                 placeholder='Enter your name'
               />
             </div>
-            <div class='form-group'>
-              <label for='email'>Email address</label>
+            <div className='form-group'>
+              <label htmlFor='email'>Email address</label>
               <input
                 type='email'
-                class='form-control'
+                className='form-control'
                 name='email'
                 id='email'
                 aria-describedby='emailHelp'
                 placeholder='Enter email'
               />
             </div>
-            <div class='form-group'>
-              <label for='userMessage'>Message</label>
+            <div className='form-group'>
+              <label htmlFor='userMessage'>Message</label>
               <textarea
-                class='form-control'
+                className='form-control'
                 id='userMessage'
                 name='message'
                 rows='3'
@@ -41,7 +41,7 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button type='submit' class='btn btn-primary'>
+            <button type='submit' className='btn btn-primary'>
               Submit
             </button>
           </form>
@@ -73,10 +73,10 @@ const Contact = () => {
           <div className='contact-map'>
             <iframe
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.359276980507!2d85.2833091732747!3d27.69906977347229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1860ae22d385%3A0x7c2444e8284cef52!2sKalimati%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1603529732187!5m2!1sen!2snp'
-              frameborder='0'
-              allowfullscreen=''
+              frameBorder='0'
+              allowFullScreen=''
               aria-hidden='false'
-              tabindex='0'
+              tabIndex='0'
             ></iframe>
           </div>
         </div>

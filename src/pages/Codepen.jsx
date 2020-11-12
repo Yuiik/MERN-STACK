@@ -2,9 +2,28 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Section from '../components/Section'
+import loadingGif from '../assets/aacismaharjan-loading-logo.svg'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const CodepenCard = ({ id }) => {
+  const [isLoading, setIsLoading] = useState(true)
   const codepenURL = `https://codepen.io/aashish2058/embed/${id}?theme-id=light&default-tab=result`
+  const loading = (
+    <AnimatePresence>
+      {isLoading && (
+        <motion.div
+          className='overlay'
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1, type: 'spring', stiffness: 2000 }}
+          exit={{ scale: 2, opacity: 0 }}
+          transition={{ duration: 0.25 }}
+        >
+          <img src={loadingGif} alt='Loading aacismaharjan...' />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+
   return (
     <div className='codepen-card mb-5' data-aos='fade-up'>
       <iframe
@@ -15,7 +34,9 @@ const CodepenCard = ({ id }) => {
         allowtransparency='true'
         allowFullScreen={true}
         title={id}
-      ></iframe>
+        onLoad={() => setIsLoading(false)}
+      />
+      {loading}
     </div>
   )
 }

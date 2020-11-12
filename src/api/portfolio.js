@@ -6,11 +6,20 @@ import QuizbeeThumb from '../assets/portfolio/quizbee.jpg'
 import YoutubeCloneThumb from '../assets/portfolio/youtube-clone.jpg'
 import SimplePortfolioThumb from '../assets/portfolio/simple_portfolio.jpg'
 import CoolorsThumb from '../assets/portfolio/coolors.jpg'
-import LandingPageTemplateThumb from '../assets/portfolio/landing_page_template.jpg'
 import GetWatchThumb from '../assets/portfolio/getwatch.jpg'
+import ErkeNepalThumb from '../assets/portfolio_hd/erkenepal.png'
+import ReactReduxRestThumb from '../assets/portfolio_hd/react-redux-rest.png'
 import GithubUserStatThumb from '../assets/portfolio/github_user_stats.jpg'
 
 export default [
+  {
+    img: ErkeNepalThumb,
+    title: 'Erke Nepal - HTML, CSS & JS',
+    desc:
+      'A Website for Shoes shop in Nepal. Simple landing page made with HTML, CSS & JS',
+    demo: 'https://erkenepal.com/',
+    source: 'https://erkenepal.com/',
+  },
   {
     img: GetWatchThumb,
     title: 'Apple Watch - ReactJs Template',
@@ -36,6 +45,14 @@ export default [
     source: 'https://github.com/aacismaharjan/himalayanresort',
   },
   {
+    img: ReactReduxRestThumb,
+    title: 'Redux Redux Rest - React, Redux & Thunk',
+    desc:
+      'A simple react-redux, redux-thunk web app for create, read, update and delete restful apis.',
+    demo: 'https://aacismaharjan.github.io/react-redux-rest/',
+    source: 'https://github.com/aacismaharjan/react-redux-rest',
+  },
+  {
     img: CoronaTrackerThumb,
     title: 'Corona Tracker - ReactJS',
     desc:
@@ -50,13 +67,6 @@ export default [
       'Simple Youtube Clone with React.js. It utilizes the Youtube api to fetch the data and display it',
     demo: 'https://aacismaharjan.github.io/youtube-clone/',
     source: 'https://github.com/aacismaharjan/youtube-clone',
-  },
-  {
-    img: LandingPageTemplateThumb,
-    title: 'Product Landing Page - HTML Template',
-    desc: 'Landing page for client with Modern Looks, Design and Framework!',
-    demo: 'https://aacismaharjan.github.io/product_landing_page/',
-    source: 'https://github.com/aacismaharjan/product_landing_page',
   },
   {
     img: SimplePortfolioThumb,

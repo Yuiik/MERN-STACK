@@ -28,8 +28,8 @@ const Contact = () => {
 
   return (
     <Section id='contact' title='Contact'>
-      <div className='row'>
-        <div className='col-md-5 order-last order-lg-first'>
+      <div className='row justify-content-between'>
+        <div className='col-md-5 order-last order-lg-first' data-aos='fade-up'>
           <div className='subheading mb-3'>I'd love to hear from you</div>
           <form>
             <div className='form-group'>
@@ -80,8 +80,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <div className='col-md-1'></div>
-        <div className='col-md-6 mb-5 mb-lg-0'>
+        <div className='col-md-6 mb-5 mb-lg-0' data-aos='fade-up'>
           <div className='subheading mb-3'>Reach out to me directly</div>
           <div className='contact-direct'>
             <div className='row'>

@@ -10,6 +10,7 @@ import Codepen from './pages/Codepen'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Contact from './pages/Contact'
+import { Helmet } from 'react-helmet'
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,18 @@ function App() {
   return (
     <Switch>
       <Route exact path='/'>
+        <Helmet>
+          <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1, shrink-to-fit=no'
+          />
+          <meta
+            name='description'
+            content='Aashish Maharjan - Fullstack web developer who loves javascrip and modern web technologies.'
+          />
+          <meta name='author' content='Aashish Maharjan' />
+          <title>Aashish Maharjan - A Full Stack Junior Web Developer</title>
+        </Helmet>
         <div id='wrapper'>
           <Navbar />
           <Home />

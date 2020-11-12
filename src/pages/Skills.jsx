@@ -32,26 +32,38 @@ class Skills extends Component {
         title: 'C Programming',
         progress: '40%',
       },
+    ],
+    frameworks: [
+      {
+        title: 'React.js',
+        progress: '70%',
+      },
+      {
+        title: 'Redux',
+        progress: '85%',
+      },
+      {
+        title: 'Framer Motion',
+        progress: '40%',
+      },
+      {
+        title: 'Ant Design',
+        progress: '50%',
+      },
       {
         title: 'Photoshop / Figma',
         progress: '60%',
       },
-    ],
-    frameworks: [
+      {
+        title: 'Django',
+        progress: '30%',
+      },
       {
         title: 'Bootstrap',
         progress: '60%',
       },
       {
         title: 'Material-UI',
-        progress: '30%',
-      },
-      {
-        title: 'React.js',
-        progress: '55%',
-      },
-      {
-        title: 'Django',
         progress: '30%',
       },
     ],

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
+import { motion } from 'framer-motion'
 import Avatar from '../assets/avatar.jpg'
 
 export default function Navigation() {
@@ -29,19 +30,21 @@ export default function Navigation() {
   return (
     <Navbar
       collapseOnSelect
-      expand='lg'
-      bg='dark'
       variant='dark'
-      id='sideNav'
+      expand='lg'
       className='fixed-top'
+      id='sideNav'
     >
-      <Navbar.Brand href='#home'>
+      <Navbar.Brand onClick={() => (window.location = '/#about')}>
         <span className='d-block d-lg-none'>Aashish Mahajran</span>
         <span className='d-none d-lg-block'>
-          <img
+          <motion.img
             className='img-fluid img-profile rounded-circle mx-auto mb-2'
             src={Avatar}
             alt='Aashish Maharjan'
+            drag
+            dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+            dragElastic={0.1}
           />
         </span>
       </Navbar.Brand>

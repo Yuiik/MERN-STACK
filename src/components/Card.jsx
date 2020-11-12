@@ -17,7 +17,7 @@ export default function PortfolioCard({
     const onImageLoaded = () => {
       const tempImg = new Image()
       tempImg.src = img
-      tempImg.onload = setIsLoading(false)
+      tempImg.onload = setTimeout(() => setIsLoading(false), 1000)
     }
     onImageLoaded()
   }, [img])
@@ -29,15 +29,12 @@ export default function PortfolioCard({
           {isLoading && (
             <motion.div
               className='overlay'
-              initial={{ scale: 0, opacity: 0 }}
+              initial={{ opacity: 0 }}
               animate={{
-                scale: 1,
                 opacity: 1,
-                type: 'spring',
-                stiffness: 2000,
               }}
-              exit={{ scale: 2, opacity: 0 }}
-              transition={{ duration: 0.25 }}
+              transition={{ duration: 0 }}
+              exit={{ opacity: 0 }}
             >
               <img src={loadingGif} alt='Loading aacismaharjan...' />
             </motion.div>

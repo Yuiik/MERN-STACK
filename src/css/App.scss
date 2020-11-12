@@ -318,9 +318,44 @@ section.resume-section .resume-section-content {
 }
 
 /* Media query */
-@media screen and (max-width: 768px) {
+
+@media (max-width: 992px) {
+  #sideNav {
+    .navbar-collapse {
+      .navbar-nav {
+        margin: 15px 0;
+        padding: 0 15px;
+        background: white;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+        .nav-link {
+          font-weight: 600;
+          color: var(--primary);
+          padding: 16px 0;
+
+          &.active {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
   #about > div > h1 {
     font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section.resume-section {
+    padding-top: 3rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #about > div > h1 {
+    font-size: 4rem;
+    line-height: 1;
   }
 }
 @media screen and (max-width: 520px) {
@@ -399,11 +434,5 @@ section.resume-section .resume-section-content {
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #about > div > h1 {
-    font-size: 3rem;
   }
 }

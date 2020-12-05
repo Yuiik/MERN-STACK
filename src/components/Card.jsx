@@ -2,45 +2,40 @@ import React, { useState } from 'react'
 import { Button, Card } from 'react-bootstrap'
 import { motion, AnimatePresence } from 'framer-motion'
 import loadingGif from '../assets/aacismaharjan-loading-logo.svg'
-import { useEffect } from 'react'
 
 export default function PortfolioCard({
   card: { img, title, desc, demo, source },
 }) {
+  const [isLoading, setIsLoading] = useState(true)
+
   const thumbnail = {
     backgroundImage: `url(${img})`,
   }
 
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const onImageLoaded = () => {
-      const tempImg = new Image()
-      tempImg.src = img
-      tempImg.onload = setTimeout(() => setIsLoading(false), 1000)
-    }
-    onImageLoaded()
-  }, [img])
+  const LoadingAnimation = () => {
+    return (
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div className='overlay'>
+            <img
+              src={img}
+              onLoad={() => setTimeout(() => setIsLoading(false), 1000)}
+              onError={() => setIsLoading(false)}
+              style={{ display: 'none' }}
+            />
+            <img src={loadingGif} alt='Loading card...' />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    )
+  }
 
   return (
     <Card data-aos='flip-left'>
       <div className='card-thumbnail' style={thumbnail}>
-        <AnimatePresence>
-          {isLoading && (
-            <motion.div
-              className='overlay'
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-              }}
-              transition={{ duration: 0 }}
-              exit={{ opacity: 0 }}
-            >
-              <img src={loadingGif} alt='Loading aacismaharjan...' />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <LoadingAnimation />
       </div>
+
       <Card.Body>
         <Card.Title className='title'>{title}</Card.Title>
         <Card.Text>{desc}</Card.Text>

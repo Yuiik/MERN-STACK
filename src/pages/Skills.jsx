@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import Section from '../components/Section'
 import Skill from '../components/Skill'
+import Pie3D from '../components/Chart/Pie3D'
+import items from '../mock/repos'
 
-class Skills extends Component {
-  state = {
-    workData: [
-      { icon: 'fa-check', text: 'Mobile-First, Responsive Design' },
-      { icon: 'fa-check', text: 'Cross Browser Testing & Debugging' },
-      { icon: 'fa-check', text: 'Cross Functional Teams' },
-      { icon: 'fa-check', text: 'Agile Development & Scrum' },
-    ],
+const Skills = () => {
+  const [repoItems, setRepoItems] = useState([])
+  const [dataSource, setDataSource] = useState([])
 
+  let data = {
     skills: [
       {
         title: 'HTML',
@@ -69,45 +67,80 @@ class Skills extends Component {
     ],
   }
 
-  render() {
-    const { skills, frameworks } = this.state
-
-    const skillsJsx = skills.map((skill, index) => (
-      <div className='col-md-8 py-1' key={index}>
-        <Skill skill={skill} />
-      </div>
-    ))
-
-    const frameworksJsx = frameworks.map((skill, index) => (
-      <div className='col-md-8 py-1' key={index}>
-        <Skill skill={skill} secondary />
-      </div>
-    ))
-
-    // const workOverFlow = (
-    //   <ul className='fa-ul mb-0'>
-    //     {workData.map(({ icon, text }, index) => (
-    //       <li key={index}>
-    //         <span className='fa-li'>
-    //           <i className={`fas ${icon}`}></i>
-    //         </span>
-    //         {text}
-    //       </li>
-    //     ))}
-    //   </ul>
-    // )
-
-    return (
-      <Section id='skills' title='Skills'>
-        <div className='subheading mb-3'>Coding Languages</div>
-        <div className='row mb-4'>{skillsJsx}</div>
-        <div className='subheading mb-3'>Frameworks / Libraries</div>
-        <div className='row mb-4'>{frameworksJsx}</div>
-        {/* <div className="subheading mb-3">Workflow</div>
-        {workOverFlow} */}
-      </Section>
-    )
+  const getData = () => {
+    fetch('https://api.github.com/users/aacismaharjan/repos?per_page=100')
+      .then((res) => res.json())
+      .then((data) => setRepoItems(data))
   }
+
+  useEffect(() => {
+    // Fetch from official api
+    getData()
+
+    // Offline api
+    // setRepoItems(items)
+  }, [])
+
+  useEffect(() => {
+    let languages = repoItems.reduce((total, item) => {
+      const { language, stargazers_count } = item
+      if (!language) return total
+
+      if (!total[language]) {
+        total[language] = {
+          label: language,
+          value: 1,
+          stars: stargazers_count,
+        }
+      } else {
+        total[language] = {
+          ...total[language],
+          value: total[language].value + 1,
+          stars: total[language].stars + 1,
+        }
+      }
+
+      return total
+    }, {})
+
+    const mostUsed = Object.values(languages)
+      .sort((a, b) => {
+        return b.value - a.value
+      })
+      .slice(0, 5)
+    setDataSource(mostUsed)
+  }, [repoItems])
+
+  const { skills, frameworks } = data
+
+  const skillsJsx = skills.map((skill, index) => (
+    <div className='col-md-8 py-1' key={index}>
+      <Skill skill={skill} />
+    </div>
+  ))
+
+  const frameworksJsx = frameworks.map((skill, index) => (
+    <div className='col-md-8 py-1' key={index}>
+      <Skill skill={skill} secondary />
+    </div>
+  ))
+
+  const languagesUsedChart = (
+    <div className='col-md-6 py-1'>
+      <Pie3D data={dataSource} />
+    </div>
+  )
+
+  return (
+    <Section id='skills' title='Skills'>
+      <div className='subheading mb-3'>Coding Languages</div>
+      <div className='row mb-4'>{skillsJsx}</div>
+      <div className='subheading mb-3'>Frameworks / Libraries</div>
+      <div className='row mb-4'>{frameworksJsx}</div>
+      <div className='subheading mb-3'>Languages used as per Github</div>
+      <div className='row mb-4'>{languagesUsedChart}</div>
+    </Section>
+  )
 }
 
 export default Skills

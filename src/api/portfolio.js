@@ -9,16 +9,20 @@ import CoolorsThumb from "../assets/portfolio/coolors.jpg"
 import GetWatchThumb from "../assets/portfolio/getwatch.jpg"
 import ReactReduxRestThumb from "../assets/portfolio_hd/react-redux-rest.png"
 import GithubUserStatThumb from "../assets/portfolio/github_user_stats.jpg"
+import MernTwitterCloneThumb from "../assets/portfolio/mern-twitter-clone.png"
+import LandingPageTemplateThumb from "../assets/portfolio/landing_page_template.jpg"
+import AppLandingPageThumb from "../assets/portfolio/app-landingpage.png"
 
 export default [
   {
-    img: GetWatchThumb,
-    title: "Apple Watch - ReactJs Template",
+    img: MernTwitterCloneThumb,
+    title: "Simple Twitter CRUD - MERN Stack",
     desc:
-      "Created with highly reusable components, can be updated from remote file.",
-    demo: "https://getwatch.netlify.app/",
-    source: "https://github.com/aacismaharjan/react_landing_page",
+      "Simple CRUD MERN Stack app that allows creating, reading, updating and deleting tweets and basic look of Twitter",
+    demo: "https://mern-twitter-crud.herokuapp.com/",
+    source: "https://mern-twitter-crud.herokuapp.com/",
   },
+
   {
     img: HimalanResortThumb,
     title: "Himalayan Resort - ReactJS",
@@ -50,6 +54,30 @@ export default [
       "A simple react-redux, redux-thunk web app for create, read, update and delete restful apis.",
     demo: "https://aacismaharjan.github.io/react-redux-rest/",
     source: "https://github.com/aacismaharjan/react-redux-rest",
+  },
+  {
+    img: GetWatchThumb,
+    title: "APPLE WATCH - REACTJS TEMPLATE",
+    desc:
+      "Created with highly reusable components, can be updated from remote file.",
+    demo: "https://getwatch.netlify.app/",
+    source: "https://getwatch.netlify.app/",
+  },
+  {
+    img: AppLandingPageThumb,
+    title: "Fusion App landing page - HTML & CSS",
+    desc:
+      "Fusion App HTML Template created using HTML, CSS, Bootstrap, JS, Jquery, and other thrid party libraries.",
+    demo: "https://fusion-app-landing-page.netlify.app/",
+    source: "https://fusion-app-landing-page.netlify.app/",
+  },
+  {
+    img: LandingPageTemplateThumb,
+    title: "Landing Page Template - HTML & CSS",
+    desc:
+      "Landing page template for watch product. Created with HTML, CSS, JS, Jquery, Bootstrap and other production ready libraries.",
+    demo: "https://getwatch.netlify.app/",
+    source: "https://github.com/aacismaharjan/react_landing_page",
   },
   {
     img: YoutubeCloneThumb,

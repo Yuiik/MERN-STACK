@@ -1,1 +1,1 @@
-export default ["MWyMjqR", "MWydyoe", "xxEPOdb"]
+export default ['MWyMjqR', 'MWydyoe'];

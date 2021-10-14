@@ -25,10 +25,10 @@ const Skills = () => {
         title: "Python",
         progress: "35%",
       },
-      {
-        title: "C Programming",
-        progress: "40%",
-      },
+      // {
+      //   title: "C Programming",
+      //   progress: "40%",
+      // },
     ],
     frameworks: [
       {
@@ -38,10 +38,6 @@ const Skills = () => {
       {
         title: "Redux",
         progress: "85%",
-      },
-      {
-        title: "Framer Motion",
-        progress: "40%",
       },
       {
         title: "Ant Design",
@@ -136,8 +132,8 @@ const Skills = () => {
       <div className="row mb-4">{skillsJsx}</div>
       <div className="subheading mb-3">Frameworks / Libraries</div>
       <div className="row mb-4">{frameworksJsx}</div>
-      <div className="subheading mb-3">Languages used as per Github</div>
-      <div className="row mb-4">{languagesUsedChart}</div>
+      {/* <div className="subheading mb-3">Languages used as per Github</div>
+      <div className="row mb-4">{languagesUsedChart}</div> */}
     </Section>
   )
 }

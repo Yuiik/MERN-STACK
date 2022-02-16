@@ -13,6 +13,7 @@ import MernTwitterCloneThumb from '../assets/portfolio/mern-twitter-clone.png';
 import LandingPageTemplateThumb from '../assets/portfolio/landing_page_template.jpg';
 import AppLandingPageThumb from '../assets/portfolio/app-landingpage.png';
 import NetflixCloneThumb from '../assets/portfolio_hd/netflix-clone.png';
+import BasicNetflixClone from '../assets/portfolio_hd/basic-netflix.png';
 
 export default [
   // {
@@ -36,6 +37,13 @@ export default [
     desc: 'A resort for fictional hotel, in which we can filter out the hotel rooms and see specific info about the hotel.',
     demo: 'https://himalayanresort.netlify.app/',
     source: 'https://github.com/aacismaharjan/himalayanresort',
+  },
+  {
+    img: BasicNetflixClone,
+    title: 'Fav Films - Wishlist Your Movies',
+    desc: 'Netflix like web app using react.js which features user to wishlist their favourite films.',
+    demo: 'https://favfilms.netlify.app/genre/adventure',
+    source: 'https://favfilms.netlify.app/genre/adventure',
   },
   {
     img: LandingPageTemplateThumb,

@@ -14,6 +14,7 @@ import LandingPageTemplateThumb from '../assets/portfolio/landing_page_template.
 import AppLandingPageThumb from '../assets/portfolio/app-landingpage.png';
 import NetflixCloneThumb from '../assets/portfolio_hd/netflix-clone.png';
 import BasicNetflixClone from '../assets/portfolio_hd/basic-netflix.png';
+import TypingTestThumb from '../assets/portfolio_hd/typing-test.png';
 
 export default [
   // {
@@ -42,8 +43,8 @@ export default [
     img: BasicNetflixClone,
     title: 'Fav Films - Wishlist Your Movies',
     desc: 'Netflix like web app using react.js which features user to wishlist their favourite films.',
-    demo: 'https://favfilms.netlify.app/genre/adventure',
-    source: 'https://favfilms.netlify.app/genre/adventure',
+    demo: 'https://favfilms.netlify.app',
+    source: 'https://favfilms.netlify.app',
   },
   {
     img: LandingPageTemplateThumb,
@@ -65,6 +66,13 @@ export default [
     desc: 'Fetches Github Api of user and processes it into meaningful information with the help of fusion charts and Auth0',
     demo: 'https://github-user-stats.netlify.app/',
     source: 'https://github.com/aacismaharjan/search-github-user',
+  },
+  {
+    img: TypingTestThumb,
+    title: 'Typing Tester - Test your typing speed',
+    desc: 'Typing tester helps you in figuring out your typing speed, practice touch typing, and ace your touch typing with typing test.',
+    demo: 'https://aacismaharjan.github.io/typing-test/',
+    source: 'https://github.com/aacismaharjan/typing-test',
   },
   {
     img: CoronaTrackerThumb,

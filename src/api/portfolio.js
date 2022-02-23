@@ -15,6 +15,7 @@ import AppLandingPageThumb from '../assets/portfolio/app-landingpage.png';
 import NetflixCloneThumb from '../assets/portfolio_hd/netflix-clone.png';
 import BasicNetflixClone from '../assets/portfolio_hd/basic-netflix.png';
 import TypingTestThumb from '../assets/portfolio_hd/typing-test.png';
+import InstagramCloneThumb from '../assets/portfolio_hd/instagram-clone.png';
 
 export default [
   // {
@@ -45,6 +46,13 @@ export default [
     desc: 'Netflix like web app using react.js which features user to wishlist their favourite films.',
     demo: 'https://favfilms.netlify.app',
     source: 'https://favfilms.netlify.app',
+  },
+  {
+    img: InstagramCloneThumb,
+    title: 'Instagram Clone - Quick Photo Sharing App',
+    desc: 'Instagram clone using react.js and typescript. Create a post with image url and caption and see feeds, profile etc.',
+    demo: 'https://instagram999.netlify.app/',
+    source: 'https://instagram999.netlify.app/',
   },
   {
     img: LandingPageTemplateThumb,
